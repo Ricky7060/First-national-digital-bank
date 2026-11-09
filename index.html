@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>First National Digital Bank — Demo</title>
+
+<title>First National Digital Bank</title>
 
 <style>
 * {
@@ -14,24 +15,25 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #081321;
-    color: #ffffff;
+    background: #f3f6fa;
+    color: #172b42;
 }
 
 header {
-    background: #10243a;
+    background: #102b46;
+    color: white;
     padding: 22px 6%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
 }
 
 .logo {
-    font-size: 21px;
+    font-size: 20px;
     font-weight: bold;
-    color: #55d6a0;
+    color: #65d6a5;
 }
 
 nav a {
@@ -41,13 +43,34 @@ nav a {
     font-size: 14px;
 }
 
-.demo-banner {
-    background: #ffdf91;
-    color: #362400;
-    padding: 12px;
-    text-align: center;
+.hero {
+    background: linear-gradient(120deg, #102b46, #1c5071);
+    color: white;
+    padding: 65px 7%;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #d9e7f1;
+    line-height: 1.7;
+    max-width: 620px;
+}
+
+.button {
+    display: inline-block;
+    background: #42c58b;
+    color: #082b20;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 22px;
+    cursor: pointer;
     font-weight: bold;
-    font-size: 13px;
+    text-decoration: none;
 }
 
 .container {
@@ -56,36 +79,9 @@ nav a {
     padding: 35px 20px;
 }
 
-.hero {
-    padding: 55px 0;
-}
-
-.hero h1 {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    color: #b8c6d5;
-    line-height: 1.7;
-    max-width: 650px;
-}
-
-.button {
-    display: inline-block;
-    background: #35c98b;
-    color: #071a14;
-    padding: 13px 22px;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    margin-top: 22px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
 .section-title {
-    margin: 30px 0 18px;
+    margin: 25px 0 18px;
+    font-size: 23px;
 }
 
 .cards {
@@ -95,86 +91,95 @@ nav a {
 }
 
 .card {
-    background: #14283e;
-    padding: 24px;
-    border-radius: 12px;
-    border: 1px solid #263d54;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,.05);
 }
 
 .card small {
-    color: #b6c5d4;
+    color: #718096;
 }
 
 .balance {
     font-size: 27px;
-    margin-top: 13px;
     font-weight: bold;
-    color: #55d6a0;
+    margin-top: 14px;
+    color: #147b59;
 }
 
 .panel {
-    background: #14283e;
+    background: white;
     padding: 25px;
-    border-radius: 12px;
     margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,.05);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
+    margin-top: 18px;
 }
 
 th, td {
     padding: 14px 8px;
+    border-bottom: 1px solid #e6ebf0;
     text-align: left;
-    border-bottom: 1px solid #30445a;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 th {
-    color: #55d6a0;
+    color: #147b59;
 }
 
 form {
     display: grid;
-    gap: 12px;
-    max-width: 480px;
-    margin-top: 18px;
+    gap: 13px;
+    max-width: 450px;
+    margin-top: 20px;
 }
 
 input, select {
-    padding: 13px;
+    padding: 14px;
+    border: 1px solid #d5dee7;
     border-radius: 6px;
-    border: 1px solid #40566b;
-    background: #091827;
-    color: white;
     width: 100%;
+    background: white;
 }
 
 .notice {
-    color: #ffdf91;
-    font-size: 13px;
+    font-size: 12px;
+    color: #68788a;
     line-height: 1.6;
-    margin-top: 12px;
+    margin-top: 14px;
 }
 
 footer {
-    background: #10243a;
+    background: #102b46;
+    color: #d7e2ec;
     text-align: center;
-    padding: 25px;
-    margin-top: 50px;
-    color: #aebdca;
+    padding: 28px 15px;
+    margin-top: 45px;
     font-size: 12px;
-    line-height: 1.7;
+    line-height: 1.8;
+}
+
+footer a {
+    color: #65d6a5;
 }
 
 @media(max-width:600px) {
     .hero h1 {
-        font-size: 30px;
+        font-size: 29px;
     }
+
     nav a {
         margin-left: 8px;
+    }
+
+    table {
+        font-size: 12px;
     }
 }
 </style>
@@ -182,118 +187,154 @@ footer {
 
 <body>
 
-<div class="demo-banner">
-    DEMONSTRATION WEBSITE — NOT A REAL BANK. NO REAL MONEY OR FINANCIAL SERVICES.
-</div>
-
 <header>
     <div class="logo">FIRST NATIONAL DIGITAL BANK</div>
+
     <nav>
         <a href="#home">Home</a>
-        <a href="#dashboard">Dashboard</a>
+        <a href="#accounts">Accounts</a>
+        <a href="#transactions">Transactions</a>
         <a href="#services">Services</a>
     </nav>
 </header>
 
-<main class="container">
-
 <section class="hero" id="home">
-    <h1>Welcome to Digital Banking</h1>
+    <h1>Banking, Made Simpler.</h1>
+
     <p>
-        Explore a demonstration of a modern digital banking experience.
-        View sample account balances, explore banking features and
-        experience a simple customer dashboard.
+        Explore a modern digital banking interface designed
+        around convenience, accessibility and a clear view
+        of your finances.
     </p>
-    <a href="#dashboard" class="button">Explore Dashboard</a>
+
+    <a href="#accounts" class="button">Explore Dashboard</a>
 </section>
 
-<section id="dashboard">
-    <h2 class="section-title">Sample Customer Dashboard</h2>
+<main class="container">
+
+<section id="accounts">
+    <h2 class="section-title">Account Overview</h2>
 
     <div class="cards">
+
         <div class="card">
-            <small>Checking Account</small>
+            <small>Sample Checking Account</small>
             <div class="balance">$2,450.00</div>
         </div>
 
         <div class="card">
-            <small>Savings Account</small>
+            <small>Sample Savings Account</small>
             <div class="balance">$5,200.00</div>
         </div>
 
         <div class="card">
-            <small>Available Credit</small>
+            <small>Sample Available Credit</small>
             <div class="balance">$0.00</div>
         </div>
+
     </div>
 
-    <div class="panel">
-        <h3>Recent Sample Transactions</h3>
+    <p class="notice">
+        Account figures shown are illustrative examples and do not
+        represent actual customer funds or available credit.
+    </p>
+</section>
 
-        <table>
-            <tr>
-                <th>Description</th>
-                <th>Date</th>
-                <th>Amount</th>
-            </tr>
-            <tr>
-                <td>Sample Deposit</td>
-                <td>Nov 05, 2026</td>
-                <td>+$500.00</td>
-            </tr>
-            <tr>
-                <td>Sample Payment</td>
-                <td>Nov 03, 2026</td>
-                <td>-$75.00</td>
-            </tr>
-            <tr>
-                <td>Sample Transfer</td>
-                <td>Nov 01, 2026</td>
-                <td>-$120.00</td>
-            </tr>
-        </table>
-        <p class="notice">All balances and transactions above are fictional examples.</p>
-    </div>
+<section class="panel" id="transactions">
+    <h2>Recent Transactions</h2>
+
+    <table>
+        <tr>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Amount</th>
+        </tr>
+
+        <tr>
+            <td>Sample Deposit</td>
+            <td>Nov 05, 2026</td>
+            <td>+$500.00</td>
+        </tr>
+
+        <tr>
+            <td>Sample Payment</td>
+            <td>Nov 03, 2026</td>
+            <td>-$75.00</td>
+        </tr>
+
+        <tr>
+            <td>Sample Transfer</td>
+            <td>Nov 01, 2026</td>
+            <td>-$120.00</td>
+        </tr>
+    </table>
 </section>
 
 <section id="services">
-    <h2 class="section-title">Explore Banking Features</h2>
+    <h2 class="section-title">Banking Services</h2>
 
     <div class="cards">
+
         <div class="card">
             <h3>Checking Accounts</h3>
-            <p class="notice">Explore a sample checking account interface.</p>
+            <p class="notice">
+                Explore a sample checking account interface.
+            </p>
         </div>
 
         <div class="card">
             <h3>Savings Accounts</h3>
-            <p class="notice">Explore a sample savings account interface.</p>
+            <p class="notice">
+                Explore a sample savings account interface.
+            </p>
         </div>
 
         <div class="card">
             <h3>Loan Information</h3>
-            <p class="notice">View an example of a loan information page.</p>
+            <p class="notice">
+                Explore an educational loan calculator.
+            </p>
         </div>
 
         <div class="card">
             <h3>Card Services</h3>
-            <p class="notice">Explore a demonstration card services page.</p>
+            <p class="notice">
+                Explore a sample card services interface.
+            </p>
         </div>
+
     </div>
 </section>
 
 <section class="panel">
-    <h2>Demo Loan Calculator</h2>
-    <p class="notice">This calculator is for educational demonstration only. It does not submit a loan application.</p>
+    <h2>Loan Payment Calculator</h2>
+
+    <p class="notice">
+        Calculate an illustrative monthly payment.
+        This is not a loan application or credit offer.
+    </p>
 
     <form id="loanForm">
-        <input type="number" id="loanAmount" placeholder="Enter sample loan amount ($)" min="1" required>
+
+        <input
+            type="number"
+            id="loanAmount"
+            placeholder="Enter sample loan amount ($)"
+            min="1"
+            required
+        >
+
         <select id="loanTerm">
             <option value="12">12 months</option>
             <option value="24">24 months</option>
             <option value="36">36 months</option>
+            <option value="48">48 months</option>
         </select>
-        <button class="button" type="submit">Calculate Sample Payment</button>
+
+        <button class="button" type="submit">
+            Calculate Payment
+        </button>
+
     </form>
 
     <p id="loanResult" class="notice"></p>
@@ -302,33 +343,45 @@ footer {
 </main>
 
 <footer>
-    <strong>FIRST NATIONAL DIGITAL BANK — DEMO</strong><br><br>
-    This is an independent demonstration website, not an actual bank.
-    It is not FDIC-insured and does not accept deposits, issue loans,
-    provide credit cards or process real financial transactions.
-    All balances and transactions are fictional.
+    <strong>FIRST NATIONAL DIGITAL BANK</strong>
+    <br>
+    Digital Banking Interface Demonstration
+    <br>
+    This independent demonstration is not an actual bank or
+    financial institution. It does not accept deposits, issue
+    credit, provide loans or process real financial transactions.
+    No deposit insurance is provided.
+    <br><br>
+    © 2026 First National Digital Bank — Demonstration Project
 </footer>
 
 <script>
-document.getElementById("loanForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+document.getElementById("loanForm").addEventListener(
+    "submit",
+    function(event) {
+        event.preventDefault();
 
-    const amount = Number(document.getElementById("loanAmount").value);
-    const months = Number(document.getElementById("loanTerm").value);
+        const amount = Number(
+            document.getElementById("loanAmount").value
+        );
 
-    if (amount <= 0 || !Number.isFinite(amount)) {
+        const months = Number(
+            document.getElementById("loanTerm").value
+        );
+
+        if (!Number.isFinite(amount) || amount <= 0) {
+            document.getElementById("loanResult").textContent =
+                "Please enter a valid amount.";
+            return;
+        }
+
+        const payment = amount / months;
+
         document.getElementById("loanResult").textContent =
-            "Please enter a valid sample amount.";
-        return;
+            "Illustrative monthly payment: $" +
+            payment.toFixed(2);
     }
-
-    const monthlyPayment = amount / months;
-
-    document.getElementById("loanResult").textContent =
-        "Illustrative monthly payment: $" +
-        monthlyPayment.toFixed(2) +
-        ". This is not a loan offer or approval.";
-});
+);
 </script>
 
 </body>
